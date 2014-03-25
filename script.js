@@ -45,7 +45,7 @@
 	  function() {	//Third Function: Fills that form and submits it
 	    page.evaluate(function() {
 	      var arr = document.getElementsByName("FrontPage_Form1");
-	          arr[0].submit();	//There's just one form on the page, so I can access it at the 0th index
+	      arr[0].submit();	//There's just one form on the page, so I can access it at the 0th index
 	    });
 	  },
 
@@ -74,13 +74,13 @@
 	    	testindex++;
 	  	}
 	  	if (typeof steps[testindex] != "function") {
-	   		 console.log("test complete!");
-	   		 testindex = 0;
-	   		 rollindex++;
+	   		console.log("test complete!");
+	   		testindex = 0;
+	   		rollindex++;
 	 	}
 	 	if (rollindex === rollnos.length) {
-        console.log("complete!");
-        phantom.exit();
+        	console.log("complete!");
+        	phantom.exit();
    		}
 	}, 50);
 
