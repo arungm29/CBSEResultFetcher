@@ -10,9 +10,9 @@
 	}
 
 	function setGlobal(page, name, data) {	//A fancy function that will make our variables global
-    var json = JSON.stringify(data);		//so that they're accessible inside page.evaluate()
-    var fn = 'return window[' + JSON.stringify(name) + ']=' + json + ';';
-    return page.evaluate(new Function(fn));
+    	var json = JSON.stringify(data);		//so that they're accessible inside page.evaluate()
+    	var fn = 'return window[' + JSON.stringify(name) + ']=' + json + ';';
+    	return page.evaluate(new Function(fn));
 	}
 
 	page.onConsoleMessage = function(msg) {	//console.log inside page.evaluate() doesn't work without this
